@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-/*
-    Colour variables used throughout the page
-    gold, light gold, dark (near black), white
-*/
 :root {
     --gold: #c78c06;
     --light-gold: #ffe6ac;
@@ -16,7 +12,7 @@
     --white: #fff;
 }
 
-/* ---- base styles (mobile first) ---- */
+/* base - mobile first */
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -38,14 +34,13 @@ ul {
     list-style: none;
 }
 
-/* HEADER */
+/* header */
 
 .header {
     background-color: var(--dark);
     padding: 10px 20px;
 }
 
-/* inner wrapper - max width keeps content from stretching too wide */
 .header-box {
     max-width: 1200px;
     margin: 0 auto;
@@ -74,7 +69,6 @@ ul {
     color: var(--gold);
 }
 
-/* search bar in header */
 .search {
     display: flex;
     gap: 5px;
@@ -95,7 +89,7 @@ ul {
     color: var(--white);
 }
 
-/* HERO */
+/* hero */
 
 .hero {
     position: relative;
@@ -107,7 +101,6 @@ ul {
     object-fit: cover;
 }
 
-/* on mobile the text sits below the image, not overlaid */
 .hero-text {
     padding: 20px;
     background-color: var(--dark);
@@ -125,7 +118,8 @@ ul {
     margin-bottom: 20px;
 }
 
-/* shared button style - reused in multiple sections */
+/* buttons */
+
 .btn {
     display: inline-block;
     background-color: var(--gold);
@@ -141,7 +135,7 @@ ul {
     background-color: var(--dark);
 }
 
-/* ABOUT */
+/* about */
 
 .about {
     background-color: var(--light-gold);
@@ -168,7 +162,7 @@ ul {
     margin-bottom: 10px;
 }
 
-/* SERVICES */
+/* services */
 
 .services {
     padding: 40px 20px;
@@ -181,7 +175,6 @@ ul {
     margin-bottom: 20px;
 }
 
-/* single column grid on mobile, changes at 760px */
 .services-row {
     display: grid;
     grid-template-columns: 1fr;
@@ -219,9 +212,8 @@ ul {
     background-color: var(--gold);
 }
 
-/* VISION */
+/* vision - used padding instead of margin auto here */
 
-/* dark section with background image - opacity set on the img */
 .vision {
     position: relative;
     background-color: var(--dark);
@@ -250,7 +242,7 @@ ul {
     margin-bottom: 20px;
 }
 
-/* TEAM */
+/* team */
 
 .team {
     padding: 40px 20px;
@@ -285,7 +277,6 @@ ul {
     margin-bottom: 5px;
 }
 
-/* gold for the job title */
 .team-text h4 {
     color: var(--gold);
     font-size: 14px;
@@ -297,7 +288,7 @@ ul {
     line-height: 1.6;
 }
 
-/* CONTACT */
+/* contact */
 
 .contact {
     padding: 40px 20px;
@@ -310,7 +301,6 @@ ul {
     margin-bottom: 20px;
 }
 
-/* stacked on mobile, side by side on wider screens */
 .contact-top {
     display: flex;
     flex-direction: column;
@@ -356,7 +346,6 @@ form .btn {
     border: none;
 }
 
-/* hours table below map/form */
 .hours {
     margin-top: 20px;
 }
@@ -384,7 +373,7 @@ form .btn {
     border-bottom: 1px solid #ddd;
 }
 
-/* FOOTER */
+/* footer */
 
 .footer {
     background-color: var(--dark);
@@ -398,11 +387,10 @@ form .btn {
     color: var(--gold);
 }
 
-/* ---- media query: 760px and up ---- */
+/* 760px and up */
 
 @media (min-width: 760px) {
 
-    /* header switches to a single row */
     .header-box {
         flex-direction: row;
         align-items: center;
@@ -413,11 +401,11 @@ form .btn {
         flex-direction: row;
     }
 
-    /* hero text overlays the image on wider screens */
     .hero-img {
         height: 500px;
     }
 
+    /* text overlays the image */
     .hero-text {
         position: absolute;
         bottom: 0;
@@ -427,7 +415,6 @@ form .btn {
         padding: 30px;
     }
 
-    /* about - image and text side by side */
     .about-box {
         display: flex;
         gap: 30px;
@@ -443,7 +430,7 @@ form .btn {
         flex: 1;
     }
 
-    /* first row of services = 2 cols, second row = 3 */
+    /* 2 col then 3 col */
     .services-row:first-of-type {
         grid-template-columns: 1fr 1fr;
     }
@@ -452,7 +439,6 @@ form .btn {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    /* vision text sits over the image */
     .vision-img {
         height: 350px;
     }
@@ -465,7 +451,6 @@ form .btn {
         max-width: 500px;
     }
 
-    /* team cards: photo on left, text on right */
     .team-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -474,7 +459,6 @@ form .btn {
         height: 100%;
     }
 
-    /* contact: form and map sit side by side */
     .contact-top {
         flex-direction: row;
     }

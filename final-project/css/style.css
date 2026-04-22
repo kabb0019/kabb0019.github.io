@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* base styles - mobile first */
+/* base - mobile first */
 body {
     font-family: 'Open Sans', sans-serif;
     color: #222;
@@ -36,7 +36,6 @@ ul {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .logo img {
@@ -47,37 +46,19 @@ ul {
 .nav ul {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
 .nav ul li a {
     color: white;
-    font-size: 14px;
     padding: 5px 10px;
-}
-
-.nav ul li a:hover {
-    color: #c78c06;
+    display: block;
 }
 
 /* search */
-.search {
-    display: flex;
-    gap: 5px;
-}
-
-.search input {
-    padding: 6px 10px;
-    font-family: 'Open Sans', sans-serif;
-    border: none;
-    width: 100%;
-}
-
 .search button {
     background-color: #c78c06;
     border: none;
     padding: 6px 10px;
-    cursor: pointer;
     color: white;
 }
 
@@ -103,25 +84,16 @@ ul {
 }
 
 .hero-text p {
-    font-size: 14px;
     margin-bottom: 20px;
-    line-height: 1.6;
 }
 
 /* buttons */
 .btn {
-    display: inline-block;
     background-color: #c78c06;
     color: white;
     padding: 10px 20px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
     border: none;
-}
-
-.btn:hover {
-    background-color: #222;
+    display: inline-block;
 }
 
 /* about */
@@ -145,8 +117,6 @@ ul {
 }
 
 .about-text p {
-    font-size: 14px;
-    line-height: 1.6;
     margin-bottom: 10px;
 }
 
@@ -162,7 +132,7 @@ ul {
     margin-bottom: 20px;
 }
 
-/* grid for cards */
+/* grid */
 .services-row {
     display: grid;
     grid-template-columns: 1fr;
@@ -176,27 +146,20 @@ ul {
 
 .service-card img {
     width: 100%;
-    height: 200px;
 }
 
 .service-card h3 {
-    font-size: 18px;
     padding: 15px 15px 5px;
 }
 
 .service-card p {
-    font-size: 14px;
-    line-height: 1.6;
     padding: 0 15px 15px;
 }
 
 .service-card .btn {
     margin: 0 15px 15px;
     background-color: #222;
-}
-
-.service-card .btn:hover {
-    background-color: #c78c06;
+    color: white;
 }
 
 /* vision */
@@ -207,7 +170,6 @@ ul {
 
 .vision-img {
     width: 100%;
-    height: 300px;
     margin-bottom: 20px;
 }
 
@@ -221,8 +183,6 @@ ul {
 }
 
 .vision-text p {
-    font-size: 14px;
-    line-height: 1.6;
     margin-bottom: 20px;
 }
 
@@ -238,6 +198,7 @@ ul {
     margin-bottom: 20px;
 }
 
+/* grid */
 .team-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -246,7 +207,6 @@ ul {
 
 .team-img img {
     width: 100%;
-    height: 250px;
 }
 
 .team-text {
@@ -255,19 +215,12 @@ ul {
 }
 
 .team-text h3 {
-    font-size: 20px;
     margin-bottom: 5px;
 }
 
 .team-text h4 {
     color: #c78c06;
-    font-size: 14px;
     margin-bottom: 10px;
-}
-
-.team-text p {
-    font-size: 14px;
-    line-height: 1.6;
 }
 
 /* contact */
@@ -282,23 +235,21 @@ ul {
     margin-bottom: 20px;
 }
 
+/* flexbox */
 .contact-top {
     display: flex;
     flex-direction: column;
-    gap: 30px;
     margin-bottom: 30px;
 }
 
 .form-box h3,
 .map-box h3 {
-    font-size: 18px;
     margin-bottom: 15px;
 }
 
 /* form */
 form label {
     display: block;
-    font-size: 14px;
     margin-bottom: 5px;
     margin-top: 10px;
 }
@@ -307,8 +258,6 @@ form input,
 form textarea {
     width: 100%;
     padding: 8px 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
     border: 1px solid #ccc;
 }
 
@@ -333,7 +282,6 @@ form .btn {
 }
 
 .hours h3 {
-    font-size: 18px;
     margin-bottom: 10px;
 }
 
@@ -346,12 +294,10 @@ form .btn {
     background-color: #ffe6ac;
     padding: 10px;
     text-align: center;
-    font-size: 14px;
 }
 
 .hours td {
     padding: 10px;
-    font-size: 14px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -359,9 +305,8 @@ form .btn {
 .footer {
     background-color: #222;
     color: white;
-    padding: 15px 20px;
+    padding: 20px;
     text-align: center;
-    font-size: 13px;
 }
 
 .footer a {
@@ -378,6 +323,7 @@ form .btn {
         justify-content: space-between;
     }
 
+    /* nav */
     .nav ul {
         flex-direction: row;
     }
@@ -399,7 +345,6 @@ form .btn {
     /* about */
     .about-box {
         display: flex;
-        gap: 30px;
         align-items: center;
     }
 
@@ -410,6 +355,7 @@ form .btn {
 
     .about-text {
         width: 50%;
+        padding-left: 20px;
     }
 
     /* services */
@@ -425,7 +371,6 @@ form .btn {
     .vision {
         display: flex;
         align-items: center;
-        gap: 30px;
     }
 
     .vision-img {
@@ -435,15 +380,12 @@ form .btn {
 
     .vision-text {
         width: 50%;
+        padding-left: 20px;
     }
 
     /* team */
     .team-grid {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .team-img img {
-        height: 300px;
     }
 
     /* contact */
@@ -453,6 +395,7 @@ form .btn {
 
     .form-box {
         width: 50%;
+        padding-right: 20px;
     }
 
     .map-box {
